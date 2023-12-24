@@ -15,10 +15,11 @@ pipeline  {
         stage("Git clone") {
             steps {
                 sh '''
-                cd /var/lib/jenkins/workspace/ansible
+                cd /var/lib/jenkins/workspace/
+                rm -rf ansible
                 git clone https://github.com/qwertynebot/ansible
                 '''
-            }
+            }                
         }    
         stage("Build") {
             steps {
