@@ -41,7 +41,7 @@ pipeline  {
         stage("docker login") {
             steps {
                 echo " ============== docker login =================="
-                withCredentials([usernamePassword(credentialsId: 'DockerHub-Credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                withCredentials([usernamePassword(credentialsId: 'DockerHub-Credentials', usernameVariable: 'yurashupik', passwordVariable: 'yurashupik')]) {
                     sh '''
                     docker login -u $USERNAME -p $PASSWORD
                     '''
@@ -52,7 +52,7 @@ pipeline  {
             steps {
                 echo " ============== pushing image =================="
                 sh '''
-                docker push darkne24/ansible
+                docker push yurashupik/ansible
                 '''
             }
         }
