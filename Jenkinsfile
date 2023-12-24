@@ -24,8 +24,8 @@ pipeline  {
         stage("Build") {
             steps {
                 sh '''
-                cd /var/lib/jenkins/workspace/ansible/ansible.j/Ansible
-                docker build -t darkne24/ansible .
+                cd /var/lib/jenkins/workspace/ansible/Ansible
+                docker build -t yurashupik/ansible .
                 '''
             }
         } 
@@ -34,7 +34,7 @@ pipeline  {
                 sh '''
                 docker run \
                 --name ansible \
-                -d darkne24/ansible
+                -d yurashupik/ansible
                 '''
             }
         }
