@@ -34,7 +34,7 @@ pipeline  {
                 sh '''
                 docker run \
                 --name ansible \
-                -d yurashupik/ansible
+                -it yurashupik/ansible
                 '''
             }
         }
