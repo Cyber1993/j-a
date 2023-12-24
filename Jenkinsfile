@@ -29,7 +29,7 @@ pipeline  {
                 '''
             }
         } 
-        stage("Postgres") {
+        stage("docker run") {
             steps {
                 sh '''
                 docker run \
